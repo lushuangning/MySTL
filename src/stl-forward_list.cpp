@@ -1,8 +1,6 @@
-#include <iostream>
+
 #include "stl-forward_list.h"
-#include "assistant_func.h"
-#include <string>
-#include <forward_list>
+
 
 using namespace std;
 
@@ -29,10 +27,12 @@ void jj04::test_forward_list(long&& value)
 	cout << "milli-seconds :" << (clock() - timeStart) << endl;
 	cout << "forward_list.max_size()= " << c.max_size() << endl;		// 有多少元素
 	cout << "forward_list.front()= " << c.front() << endl;
+	
 	string target = get_a_target_string();
 	timeStart = clock();
 	auto pItem = ::find(c.begin(), c.end(), target);
 	cout << "::find(), milli-seconds :" << (clock() - timeStart) << endl;
+	
 	if (pItem != c.end())
 	{
 		cout << "found, " << *pItem << endl;
@@ -41,6 +41,7 @@ void jj04::test_forward_list(long&& value)
 	{
 		cout << "not found! " << endl;
 	}
+	
 	timeStart = clock();
 	c.sort();	
 	cout << "c.sort(), milli-seconds : " << (clock() - timeStart) << endl;

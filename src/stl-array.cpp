@@ -1,13 +1,8 @@
-#include <array>
-#include <iostream>
-#include <ctime>
-#include <cstdlib> //qsort, bsearch, NULL
-#include "assistant_func.h"
 #include "stl-array.h"
 
 using namespace std;
 
-const long ASIZE = 500;		// 500000的时候报错？？？
+const long ASIZE = 5000;		// 500000的时候报错？？？
 
 void jj01::test_array()
 {
@@ -22,7 +17,7 @@ void jj01::test_array()
 	cout << "milli-seconds :" << (clock() - timeStart) << endl;
 	cout << "array.size()= " << c.size() << endl;
 	cout << "array.front()= " << c.front() << endl;		// 第一个元素
-	cout << "array.back()= " << c.back() << endl;
+	cout << "array.back()= " << c.back() << endl;		// 最后一个元素
 	cout << "array.data()= " << c.data() << endl;	// 返回数组第一个元素在内存的位置
 
 	long target = get_a_target_long();

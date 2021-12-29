@@ -1,13 +1,4 @@
 #include "stl-vector.h"
-#include "assistant_func.h"
-#include <vector>
-#include <string>
-#include <iostream>
-#include <algorithm>		// sort()
-#include <cstdio>	// snprintf()
-#include <cstdlib>	// abort()
-#include <stdexcept>
-#include <ctime>
 
 using namespace std;
 
@@ -41,6 +32,7 @@ void jj02::test_vector(long&& value)
 	cout << "vector.capacity()= " << c.capacity() << endl;		// 目前分配器申请到的空间有多大
 
 	string target = get_a_target_string();
+
 	{
 		timeStart = clock();
 		// ::find，全局的模板函数
